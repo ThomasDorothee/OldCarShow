@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>OldCarShow</title>
+    <meta name="author" content="GROUPE 23 HETIC">
+
+    <meta property="og:title" content="OldCarShow">
+    <meta property="og:description" content="Le meilleur endroit pour présenter mais aussi découvrir des voitures anciennes.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Rozha+One" rel="stylesheet">
+    <link href="./style/style.min.css" rel="stylesheet"><!-- Because pros don't fake defuse and use minified shit -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="logoContainer">
+            <a class="scrollLink" href="#mainPresentation"><img class="logo" src="./img/logo.svg" alt="Logo" /></a>
+        </div>
+        <nav class="navMenu">
+            <ul class="navList">
+                <li class="navItem"><a class="navItemLink scrollLink" href="#fourthSection">Nous rejoindre</a></li>
+                <li class="navItem"><a class="navItemLink scrollLink" href="#thirdSection">Exposants</a></li>
+                <li class="navItem"><a class="navItemLink scrollLink" href="#secondSection">Modèles</a></li>
+                <li class="navItem"><a class="navItemLink scrollLink" href="#firstSection">Agenda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="mainPresentation" class="mainPresentation">
+        <div class="darkenEffect">
+            <div class="mainPresentationText">
+                <h2 class="mainPresentationTitle"><span class="lightShit">OldCar</span>Show :</h2>
+                <p class="mainPresentationContent">
+                    Venez découvrir l'un des plus prestigieux salons de voitures de collection au monde.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="firstSection" class="firstSection">
+        <div class="calendarTextBlock">
+            <span class="calendarDate">Prochain salon : 17 Novembre</span>
+            <span class="calendarTheme">Thème : 30's</span>
+            <button class="calendarMoreButton">En savoir plus</button>
+        </div>
+        <div class="calendarImage"></div>
+    </section>
+
+    <section id="secondSection" class="secondSection">
+        <h2 class="secondSectionTitle">Modèles</h2>
+        <div class="secondSectionGallery">
+            <div class="galleryImage1">
+                <div class="galleryDarkEffect">
+                    <span class="galleryTitle">
+                        <a href="#" class="clearLink">Ferrari</a>
+                    </span>
+                </div>
+            </div>
+            <div class="galleryImage2">
+                <div class="galleryDarkEffect">
+                    <span class="galleryTitle">
+                        <a href="#" class="clearLink">Aston Martin</a>
+                    </span>
+                </div>
+            </div>
+            <div class="galleryImage3">
+                <div class="galleryDarkEffect">
+                    <span class="galleryTitle">
+                        <a href="#" class="clearLink">Buggati</a>
+                    </span>
+                </div>
+            </div>
+            <div class="galleryImage4">
+                <div class="galleryDarkEffect">
+                    <span class="galleryTitle">
+                        <a href="#" class="clearLink">Ford</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="thirdSection" class="thirdSection">
+        <h2 class="thirdSectionTitle">Exposants</h2>
+        <div class="contentContainer">
+            <div class="expositionImage"></div>
+            <div class="expositionTextBlock">
+                <p class="expositionText">
+                    Plus de 2500 exposants venant des quatre coins du monde chaque année avec plus de 10 000 voitures exposées.
+                </p>
+                <button class="expositionMoreButton">Voir plus</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="fourthSection" class="fourthSection">
+        <div class="contentContainer">
+            <h2 class="fourthSectionTitle">Nous rejoindre</h2>
+            <div class="fourthSectionTextBlock">
+                Pour nous rejoindre<br/> Il vous suffit simplement d'indiquer votre adresse mail ci-dessous, nous vous contacterons par la suite.
+            </div>
+            <input class="newsletterEmailInput" type="email" placeholder=" Adresse E-Mail"></input>
+            <button class="newsletterButton">Souscrire</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="flemme">
+            <div class="leftContainer">
+                <a href="#"><img class="storeIcon" src="./img/appstore.png" /></a>
+                <a href="#"><img class="storeIcon" src="./img/playstore.png" /></a>
+            </div>
+                <ul class="footerLinksList">
+                    <li class="footerLinksListItem"><a href="#" class="footerAnchor">Contact</a></li>
+                    <li class="footerLinksListItem"><a href="#" class="footerAnchor">Partenaires</a></li>
+                    <li class="footerLinksListItem"><a href="#" class="footerAnchor">Charte</a></li>
+                </ul>
+            <div class="rightContainer">
+                <a href="#"><img class="storeIcon" src="./img/twitter.png" /></a>
+                <a href="#"><img class="storeIcon" src="./img/facebook.png" /></a>
+            </div>
+        </div>
+        <div class="copyrightShit">
+            Copyright &copy; 2017 OLDCARSHOW. Tous droits réservés.
+        </div>
+    </footer>
+
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/assets.js"></script>
+
+</body>
+
+</html>

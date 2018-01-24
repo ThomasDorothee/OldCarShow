@@ -1,0 +1,472 @@
+// out: ../style/style.min.css, sourcemap: true, compress: true
+/****************************
+ *    MASTER STYLE HANDLER  *
+ ****************************/
+// Some imports from other LESS files
+@import "reset.less";
+@import "fonts.less";
+@import "mixins.less";
+@import "constants.less"; // Simple body background color
+
+body {
+    background-color: @color_main_background;
+}
+// HEADER & NAVIGATION PART
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 93px; // Sniping the height like KennyS
+    background-color: @color_main_background;
+    box-shadow: 1px 1px @shadow_offset @color_shadow_box;
+    z-index: 100;
+
+    .logoContainer {
+        display: inline-block;
+        margin-left: 30px;
+
+        .logo {
+            display: inline;
+            width: 144px;
+            height: 93px;
+        }
+    }
+
+    .navMenu {
+        float: right;
+        margin-right: 30px;
+        margin-top: 25px;
+
+        .navList {
+            display: inline-block;
+            list-style-type: none;
+            overflow: hidden;
+
+            .navItem {
+                float: right;
+                padding-left: 70px;
+
+                .navItemLink {
+                    // Navception
+                    display: block;
+                    color: @color_links_titles;
+                    text-align: center;
+                    font-size: 27px;
+                    .smoothLinkUnderline(@color_links_titles);
+                    font-family: 'Rozha One', serif;
+                }
+            }
+        }
+    }
+}
+// MAIN CONTENT
+// Presentation (Image with text on top of the site)
+
+.mainPresentation {
+    display: block;
+    width: 100%;
+    height: 860px;
+    padding-top: 93px;
+    background-repeat: no-repeats;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/pres_background.jpg");
+    box-shadow: 1px 1px @shadow_offset @color_shadow_box;
+
+    .darkenEffect {
+        display: inline-block;
+        float: left;
+        text-align: center;
+        color: white;
+        height: 860px;
+        width: 35%;
+        background-color: rgba(1, 1, 1, @image_brightness_modifier);
+        margin-left: 15%;
+
+        .mainPresentationText {
+            padding-top: 200px;
+            padding-left: 25px;
+            padding-right: 25px;
+
+            .mainPresentationTitle {
+                font-size: 65px;
+                font-family: 'Rozha One', serif;
+
+                .lightShit {
+                    font-weight: 100;
+                }
+            }
+
+            .mainPresentationContent {
+                font-size: 45px;
+                font-family: 'American Typewriter', serif;
+                font-weight: 100;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+// Calendar section
+
+.firstSection {
+    .baseMargin;
+    height: 340px;
+    margin-top: 125px;
+    background-color: @color_section_background;
+
+    .calendarImage {
+        display: inline-block;
+        float: right;
+        height: 100%;
+        width: 50%;
+        background-image: url("../img/agenda.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .calendarTextBlock {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        color: @color_links_titles;
+        font-family: "American Typewriter", serif;
+
+        .calendarDate {
+            display: block;
+            padding-top: 40px;
+            font-size: 40px;
+        }
+
+        .calendarTheme {
+            display: block;
+            padding-top: 20px;
+            font-size: 50px;
+        }
+
+        .calendarMoreButton {
+            .button(@color_links_titles, @color_links_titles);
+        }
+    }
+}
+// Models section
+
+.secondSection {
+    .baseMargin;
+    text-align: center;
+
+    &::before {
+        .lineSeparator;
+    }
+
+    .secondSectionTitle {
+        display: inline-block;
+        line-height: 73px;
+        height: 100px;
+        text-align: center;
+        font-size: 48px;
+        font-weight: normal;
+        color: @color_links_titles;
+        font-family: 'Rozha One', serif;
+    }
+
+    .secondSectionGallery {
+        margin-top: 15px;
+        height: 900px;
+        background-color: @color_section_background;
+
+        .galleryImage1 {
+            display: inline-block;
+            background-image: url("../img/gallery1.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 110%;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            float: left;
+            width: 50%;
+            height: 50%;
+
+            &:hover {
+                background-size: 100%;
+            }
+        }
+
+        .galleryImage2 {
+            display: inline-block;
+            background-image: url("../img/gallery2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 110%;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            float: left;
+            width: 50%;
+            height: 50%;
+
+            &:hover {
+                background-size: 100%;
+            }
+        }
+
+        .galleryImage3 {
+            display: inline-block;
+            background-image: url("../img/gallery3.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 110%;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            float: left;
+            width: 50%;
+            height: 50%;
+
+            &:hover {
+                background-size: 100%;
+            }
+        }
+
+        .galleryImage4 {
+            display: inline-block;
+            background-image: url("../img/gallery4.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 110%;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            float: left;
+            width: 50%;
+            height: 50%;
+
+            &:hover {
+                background-size: 100%;
+            }
+        }
+
+        .galleryDarkEffect {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            color: white;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.33;
+            transition: opacity 0.25s ease-in-out;
+            -moz-transition: opacity 0.25s ease-in-out;
+            -webkit-transition: opacity 0.25s ease-in-out;
+
+            &:hover {
+                background-color: black;
+                opacity: 0.65;
+                transition: opacity 0.25s ease-in-out;
+                -moz-transition: opacity 0.25s ease-in-out;
+                -webkit-transition: opacity 0.25s ease-in-out;
+            }
+
+            .galleryTitle {
+                display: inline-block;
+                opacity: 1;
+                padding-top: 175px;
+                text-transform: uppercase;
+                font-size: 65px;
+                font-family: 'American Typewriter', serif;
+                text-shadow: 1px 1px 20px #111;
+
+                .clearLink {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+// Exposition section
+
+.thirdSection {
+    .baseMargin;
+    text-align: center;
+
+    &::before {
+        .lineSeparator;
+    }
+
+    .thirdSectionTitle {
+        display: inline-block;
+        line-height: 73px;
+        height: 100px;
+        text-align: center;
+        font-size: 48px;
+        font-weight: normal;
+        color: @color_links_titles;
+        font-family: 'Rozha One', serif;
+    }
+
+    .contentContainer {
+        display: block;
+        height: 395px;
+
+        .expositionImage {
+            display: inline-block;
+            float: left;
+            height: 100%;
+            width: 68%;
+            background-image: url("../img/expo.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .expositionTextBlock {
+            display: table-cell;
+            vertical-align: middle;
+            float: right;
+            height: 349px;
+            width: 32%;
+            text-align: center;
+            color: @color_links_titles;
+            background-color: @color_section_background;
+            font-family: "American Typewriter", serif;
+            font-size: 1.6em;
+            padding-top: 46px;
+
+            .expositionText {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        .expositionMoreButton {
+            .button(@color_links_titles, @color_links_titles);
+        }
+    }
+}
+// Newsletter section
+
+.fourthSection {
+    height: auto;
+    text-align: center;
+
+    &::before {
+        .lineSeparator(58%); // Make the line separator slightly less long coz' ther's no margin on the section
+        // This is just some hacky fix lel
+    }
+
+    .contentContainer {
+        padding-bottom: 15px;
+        background-repeat: no-repeats;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../img/newsletter_background.jpg");
+
+        .fourthSectionTitle {
+            display: inline-block;
+            line-height: 100px;
+            height: 100px;
+            text-align: center;
+            font-size: 65px;
+            font-weight: normal;
+            color: white;
+            font-family: 'Rozha One', serif;
+            text-shadow: 1px 1px 20px @color_shadow_box;
+        }
+
+        .fourthSectionTextBlock {
+            display: block;
+            margin: auto;
+            width: 40%;
+            height: auto;
+            text-align: center;
+            font-size: 35px;
+            font-weight: normal;
+            color: white;
+            font-family: "American Typewriter", serif;
+            text-shadow: 1px 1px 20px @color_shadow_box;
+        }
+
+        .newsletterEmailInput {
+            width: 40%;
+            height: 30px;
+            margin-top: 20px;
+            border-style: solid;
+            border-width: 5px;
+            border-color: @color_section_background;
+            font-family: "American Typewriter", serif;
+            font-size: 20px;
+        }
+
+        .newsletterButton {
+            .button(@color_section_background, @color_section_background);
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 230px;
+
+    .flemme {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 200px;
+
+        .leftContainer {
+            margin-left: 3%;
+
+            .storeIcon {
+                height: 70px;
+                width: 70px;
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+        }
+
+        .rightContainer {
+            margin-right: 3%;
+
+            .storeIcon {
+                height: 70px;
+                width: 70px;
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+        }
+
+        .footerLinksList {
+            list-style-type: none;
+
+            .footerLinksListItem {
+                display: inline-block;
+                justify-content: space-between;
+
+                &:not(:last-child) {
+                    margin-right: 200px;
+                }
+
+                .footerAnchor {
+                    color: @color_links_titles;
+                    text-align: center;
+                    font-size: 30px;
+                    .smoothLinkUnderline(@color_links_titles);
+                    font-family: 'Rozha One', serif;
+                }
+            }
+        }
+    }
+
+    .copyrightShit {
+        color: @color_links_titles;
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 13px;
+    }
+}
